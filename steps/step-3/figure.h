@@ -11,7 +11,6 @@ struct  LoaderFigures
 {       LoaderFigures()
         {
             load_from_file();
-            //test();
         }
 
     myl::Mat2D* gen(int r = -1)
@@ -21,10 +20,12 @@ struct  LoaderFigures
 
     unsigned get_amount()const { return figures.size(); }
 
+    void test(){ test_01(); }
+
 private:
     std::vector<myl::Mat2D> figures;
 
-    void test()
+    void test_01()
     {   for    (const auto& mat : figures)
         {   std::wcout << "[FIGURE]:" << '\n';
             for(const auto& s   : mat.get_mat())

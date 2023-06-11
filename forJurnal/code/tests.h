@@ -47,6 +47,8 @@ inline void testclass_Bunner()
 inline void testclass_LoaderFigures()
 {   VScreen        scr     ;
     LoaderFigures  lfigures;
+
+    lfigures.test();
 }
 
 ///--------------------------|
