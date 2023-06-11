@@ -1,0 +1,21 @@
+///----------------------------|
+/// Структура файолов проекта. |
+///----------------------------:
+forJurnal
+|   forJurnal.cbp
+|   
++---bin
+|       figures.txt
+|       forJurnal.exe
+|       
++---code
+|       !main.cpp
+|       config.h
+|       figure.h
+|       myl.h
+|       tests.h
+|       vscr.h
+|       
+\---obj
+        main.o
+        
