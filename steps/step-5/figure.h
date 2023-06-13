@@ -102,9 +102,8 @@ struct  Figure
 
     Vec2u pos{0, 0};
 
-    myl::Mat2D& get_mat() const
-    {   if(pFig == nullptr) throw(ERROR_EXCEPTION_MESS("pFig == nullptr"));
-        return *pFig;
+    const myl::Mat2D& operator()() const
+    {   return *pFig;
     }
 
     void gen(int n = -1)
@@ -112,7 +111,6 @@ struct  Figure
     }
 
     unsigned get_amount() const { return figures.get_amount(); }
-
 
 private:
     LoaderFigures figures;

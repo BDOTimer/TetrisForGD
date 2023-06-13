@@ -1,0 +1,84 @@
+# depslib dependency file v1.0
+1686495168 source:e:\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\!main.cpp
+	"tests.h"
+
+1686509181 e:\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\tests.h
+	"vscr.h"
+	"figure.h"
+	"korzina.h"
+
+1686494156 e:\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\vscr.h
+	"config.h"
+
+1686418232 e:\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\config.h
+	"myl.h"
+
+1686509181 e:\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\myl.h
+	<vector>
+	<string>
+	<initializer_list>
+	"idevice.h"
+
+1686495420 e:\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\idevice.h
+	<string>
+	<memory>
+
+1686494474 e:\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\figure.h
+	"myl.h"
+	<fstream>
+
+1686509932 e:\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\korzina.h
+	"figure.h"
+
+1686495420 source:e:\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\device_console.cpp
+	"idevice.h"
+	<iostream>
+
+1686567869 source:c:\!zavod-2020\projects\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\!main.cpp
+	"tests.h"
+
+1686589438 c:\!zavod-2020\projects\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\tests.h
+	"vscr.h"
+	"figure.h"
+	"korzina.h"
+	"game.h"
+
+1686494156 c:\!zavod-2020\projects\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\vscr.h
+	"config.h"
+
+1686593787 c:\!zavod-2020\projects\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\config.h
+	"myl.h"
+
+1686595999 c:\!zavod-2020\projects\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\myl.h
+	<vector>
+	<string>
+	<chrono>
+	<thread>
+	<initializer_list>
+	"idevice.h"
+
+1686569329 c:\!zavod-2020\projects\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\idevice.h
+	<string>
+	<memory>
+
+1686595866 c:\!zavod-2020\projects\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\figure.h
+	"myl.h"
+	<fstream>
+
+1686607234 c:\!zavod-2020\projects\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\korzina.h
+	"figure.h"
+
+1686569329 source:c:\!zavod-2020\projects\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\device_console.cpp
+	"idevice.h"
+	<iostream>
+	<windows.h>
+
+1686602626 c:\!zavod-2020\projects\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\game.h
+	"korzina.h"
+	"keyboard.h"
+
+1686592817 c:\!zavod-2020\projects\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\keyboard.h
+	<conio.h>
+	"config.h"
+	<algorithm>
+

@@ -26,7 +26,12 @@
 		</Compiler>
 		<Unit filename="code/!main.cpp" />
 		<Unit filename="code/config.h" />
+		<Unit filename="code/device_console.cpp" />
 		<Unit filename="code/figure.h" />
+		<Unit filename="code/game.h" />
+		<Unit filename="code/idevice.h" />
+		<Unit filename="code/keyboard.h" />
+		<Unit filename="code/korzina.h" />
 		<Unit filename="code/myl.h" />
 		<Unit filename="code/tests.h" />
 		<Unit filename="code/vscr.h" />

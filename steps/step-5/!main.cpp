@@ -17,12 +17,7 @@ int main()
     setlocale(0, "");
     DEVICE << L"ЯTeTRis-2023\n";
 
-    try
-    {   tests();
-    }
-    catch(const CustomException& e)
-    {   DEVICE << e.what();
-    }
+    tests();
 
     DEVICE << "TETRIS FINISH!\n";
     DEVICE.pause_press_enter(L"PRESS ENTER\n");

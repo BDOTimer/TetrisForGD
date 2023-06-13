@@ -63,7 +63,7 @@ inline void testclass_Figure()
     {
         figure.gen(int(i));
 
-        scr.write({1, 1}, figure.get_mat());
+        scr.write({1, 1}, figure());
 
         hard << scr;
 
@@ -88,7 +88,7 @@ inline void testclass_Korzina()
     Figure  figure;
             figure.gen(0);
 
-    scr.write_alfa({1, 1}, figure.get_mat());
+    scr.write_alfa({1, 1}, figure());
 
             figure.pos = {10, 13};
 
@@ -100,26 +100,13 @@ inline void testclass_Korzina()
             hard << scr;
 }
 
-#include "game.h"
-///--------------------------|
-/// testclass_Game.          |<<<----------------------------------------------|===
-///--------------------------:
-inline void testclass_Game()
-{
-    VScreen scr;
-
-    Game    run(scr);
-}
-
-
 inline void tests()
 {
   //testclass_Bunner          ();
   //testclass_LoaderFigures   ();
   //testclass_Figure          ();
   //console::testclass_IDevice();
-  //testclass_Korzina         ();
-    testclass_Game            ();
+    testclass_Korzina         ();
 }
 
 #endif // TEST_H
