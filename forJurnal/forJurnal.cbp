@@ -30,6 +30,7 @@
 		<Unit filename="code/figure.h" />
 		<Unit filename="code/game.h" />
 		<Unit filename="code/idevice.h" />
+		<Unit filename="code/infopanel.h" />
 		<Unit filename="code/keyboard.h" />
 		<Unit filename="code/korzina.h" />
 		<Unit filename="code/myl.h" />

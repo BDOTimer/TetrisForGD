@@ -12,8 +12,6 @@
 ///----------------------------------------------------------------------------:
 int main()
 {
-    srand((unsigned)time(0));
-
     IDevice::create_device_console();
 
     setlocale(0, "");

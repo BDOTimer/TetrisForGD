@@ -41,7 +41,7 @@ private:
              num = 0;
 
         figure.pos = POSSTART;
-        figure.gen();
+        figure.gen(0);
 
         for(bool done = true; done; )
         {
@@ -61,7 +61,6 @@ private:
                scr.write(korzina.pos, korzina);
 
                figure.pos = POSSTART;
-               figure.gen();
 
                if(is_collision(figure.pos))
                {    done = false;
@@ -120,13 +119,13 @@ private:
     }
 
     void left()
-    {   Vec2u p = figure.pos; --p.x;
-        if(!is_collision(p)) {--figure.pos.x; --figure.pos.y;}
+    {   Vec2u p = figure.pos;--p.x;
+        if(!is_collision(p)) --figure.pos.x;
     }
 
     void right()
-    {   Vec2u p = figure.pos; ++p.x;
-        if(!is_collision(p)) {++figure.pos.x; --figure.pos.y;}
+    {   Vec2u p = figure.pos;++p.x;
+        if(!is_collision(p)) ++figure.pos.x;
     }
 
     void rot_p()

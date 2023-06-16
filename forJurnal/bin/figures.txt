@@ -14,21 +14,30 @@
      |
   O  |
  OOO |
-[FIGURE]
-
-
-
 [FIGURE]:20
 
- XX
-  XX
+ oo
+  oo
 [FIGURE]:30
 
-  xx
- xx
+  oo
+ oo
 [FIGURE]:40
 
   
  ====
+[FIGURE]
+   X
+  XXX
+   X
+[FIGURE]
+    X
+  XXX
+  X
+[FIGURE]
+   X
+  XXX
+  X X
+ 
 
 
