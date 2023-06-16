@@ -73,7 +73,7 @@ namespace myl
             for    (unsigned r = pos.y, j = 0; r < height && j < H; ++r, ++j)
             {   for(unsigned c = pos.x, i = 0; c < width  && i < W; ++c, ++i)
                 {   if(m.mat[j][i] != ' ')
-                    {    mat[r][c]  = m.mat[j][i];
+                    {   mat[r][c] = m.mat[j][i];
                     }
                 }
             }

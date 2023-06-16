@@ -3,45 +3,28 @@
 
 #include "korzina.h"
 #include "keyboard.h"
-#include "infopanel.h"
 
 struct  Game
 {       Game(VScreen& _scr)
             :   scr  (_scr), korzina(cfg.WK, cfg.HK),
                 keys ({75, 77, 72, 80})
         {
-                    infocnt.pos = {0, 0};
-            pcnt = &infocnt.push(L"cnt");
-            pnum = &infocnt.push(L"num");
-
             loop();
         }
 
 private:
-    Hard         hard;
-    VScreen&      scr;
-    Figure     figure;
-    Korzina   korzina;
-    KeysProfile  keys;
-    Infopanel infocnt;
-
-    int* pcnt = nullptr;
-    int* pnum = nullptr;
-
-    int counted = 0;
+    Hard        hard;
+    VScreen&     scr;
+    Figure    figure;
+    Korzina  korzina;
+    KeysProfile keys;
 
     void loop()
     {
         const Vec2u POSSTART = korzina.get_pos_figure_start();
 
-        int& cnt = *pcnt;
-        int& num = *pnum;
-
-             cnt = 0;
-             num = 0;
-
         figure.pos = POSSTART;
-        figure.gen();
+        figure.gen(0);
 
         for(bool done = true; done; )
         {
@@ -61,12 +44,10 @@ private:
                scr.write(korzina.pos, korzina);
 
                figure.pos = POSSTART;
-               figure.gen();
 
                if(is_collision(figure.pos))
                {    done = false;
                }
-               else num++;
             }
             else
             {   figure.pos.y++;
@@ -86,10 +67,7 @@ private:
                 }
             }
 
-            cnt += korzina.check_lines_02();
-
-                    scr.write_alfa(figure .pos, figure);
-                    scr.write     (infocnt.pos, infocnt.update());
+            scr.write_alfa(figure.pos, figure );
             hard << scr;
         }
     }
@@ -120,13 +98,13 @@ private:
     }
 
     void left()
-    {   Vec2u p = figure.pos; --p.x;
-        if(!is_collision(p)) {--figure.pos.x; --figure.pos.y;}
+    {   Vec2u p = figure.pos;--p.x;
+        if(!is_collision(p)) --figure.pos.x;
     }
 
     void right()
-    {   Vec2u p = figure.pos; ++p.x;
-        if(!is_collision(p)) {++figure.pos.x; --figure.pos.y;}
+    {   Vec2u p = figure.pos;++p.x;
+        if(!is_collision(p)) ++figure.pos.x;
     }
 
     void rot_p()

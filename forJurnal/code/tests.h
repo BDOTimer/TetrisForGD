@@ -111,39 +111,6 @@ inline void testclass_Game()
     Game    run(scr);
 }
 
-#include "infopanel.h"
-///--------------------------|
-/// testclass_Infopanel.     |<<<----------------------------------------------|===
-///--------------------------:
-inline void testclass_Infopanel()
-{
-    VScreen scr;
-
-    Infopanel  ipanel;
-
-    int& cnt = ipanel.push(L"cnt :");
-    int& num = ipanel.push(L"num :");
-
-         num = 2023;
-
-    Hard hard;
-
-    while(true)
-    {
-        cnt++;
-        num -= 3;
-
-        DEVICE.set_cursor_to_start();
-
-        ipanel.update();
-
-                scr.write({1, 1}, ipanel);
-        hard << scr;
-
-        myl::sleep(500);
-    }
-}
-
 
 inline void tests()
 {
@@ -153,7 +120,6 @@ inline void tests()
   //console::testclass_IDevice();
   //testclass_Korzina         ();
     testclass_Game            ();
-  //testclass_Infopanel       ();
 }
 
 #endif // TEST_H
