@@ -25,7 +25,12 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="code/!main.cpp" />
+		<Unit filename="code/README.md" />
 		<Unit filename="code/config.h" />
+		<Unit filename="code/control/menu.h" />
+		<Unit filename="code/control/program.h" />
+		<Unit filename="code/control/resurces.cpp" />
+		<Unit filename="code/control/resurces.h" />
 		<Unit filename="code/device_console.cpp" />
 		<Unit filename="code/figure.h" />
 		<Unit filename="code/game.h" />

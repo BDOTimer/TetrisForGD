@@ -1,38 +1,45 @@
 # depslib dependency file v1.0
-1686495168 source:e:\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\!main.cpp
+1687013992 source:e:\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\!main.cpp
 	"tests.h"
 
-1686509181 e:\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\tests.h
+1687010613 e:\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\tests.h
 	"vscr.h"
 	"figure.h"
 	"korzina.h"
+	"game.h"
+	"infopanel.h"
+	"control\program.h"
 
 1686494156 e:\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\vscr.h
 	"config.h"
 
-1686418232 e:\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\config.h
+1687001174 e:\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\config.h
 	"myl.h"
 
-1686509181 e:\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\myl.h
+1687002739 e:\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\myl.h
 	<vector>
 	<string>
+	<chrono>
+	<thread>
+	<memory>
 	<initializer_list>
 	"idevice.h"
 
-1686495420 e:\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\idevice.h
+1686569329 e:\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\idevice.h
 	<string>
 	<memory>
 
-1686494474 e:\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\figure.h
+1686595866 e:\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\figure.h
 	"myl.h"
 	<fstream>
 
-1686509932 e:\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\korzina.h
+1686821736 e:\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\korzina.h
 	"figure.h"
 
-1686495420 source:e:\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\device_console.cpp
+1687012459 source:e:\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\device_console.cpp
 	"idevice.h"
 	<iostream>
+	<windows.h>
 
 1686826026 source:c:\!zavod-2020\projects\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\!main.cpp
 	"tests.h"
@@ -86,4 +93,31 @@
 
 1686821548 c:\!zavod-2020\projects\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\infopanel.h
 	"myl.h"
+
+1686826242 e:\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\game.h
+	"korzina.h"
+	"keyboard.h"
+	"infopanel.h"
+
+1686592817 e:\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\keyboard.h
+	<conio.h>
+	"config.h"
+	<algorithm>
+
+1686821548 e:\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\infopanel.h
+	"myl.h"
+
+1687012263 e:\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\control\program.h
+	"menu.h"
+
+1687014137 e:\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\control\menu.h
+	"../game.h"
+	"resurces.h"
+
+1687011742 e:\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\control\resurces.h
+	"../config.h"
+	"../myl.h"
+	<iostream>
+
+1687011742 source:e:\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\control\resurces.cpp
 
