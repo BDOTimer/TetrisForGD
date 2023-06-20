@@ -12,10 +12,11 @@
 ///----------------------------------------------------------------------------:
 int main()
 {
-    setlocale(0, "");
     srand((unsigned)time(0));
 
     IDevice::create_device_console();
+
+    setlocale(0, "");
 
     ///------------------------------//
     /// DEVICE << L"ЯTeTRis-2023\n"; //

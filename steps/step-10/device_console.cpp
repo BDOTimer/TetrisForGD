@@ -40,7 +40,7 @@ namespace console
             }
 
            ~DeviceConsole()
-            {
+            {  //if(IDevice::p != nullptr) delete IDevice::p;
             }
 
 

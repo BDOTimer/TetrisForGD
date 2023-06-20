@@ -27,7 +27,9 @@
 		<Unit filename="code/!main.cpp" />
 		<Unit filename="code/README.md" />
 		<Unit filename="code/config.h" />
+		<Unit filename="code/control/arbiter.h" />
 		<Unit filename="code/control/menu.h" />
+		<Unit filename="code/control/player.h" />
 		<Unit filename="code/control/program.h" />
 		<Unit filename="code/control/resurces.cpp" />
 		<Unit filename="code/control/resurces.h" />

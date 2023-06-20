@@ -27,17 +27,21 @@
   
  ====
 [FIGURE]
-   X
-  XXX
-   X
+     |
+  X  |
+ XXX |
+  X  |
+     |
 [FIGURE]
-    X
-  XXX
+
+   X
+ XXX
+ X
+[FIGURE]
+
   X
-[FIGURE]
-   X
-  XXX
-  X X
+ XXX
+ X X
  
 
 

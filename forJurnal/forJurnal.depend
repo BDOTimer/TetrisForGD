@@ -41,27 +41,29 @@
 	<iostream>
 	<windows.h>
 
-1686826026 source:c:\!zavod-2020\projects\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\!main.cpp
+1687014440 source:c:\!zavod-2020\projects\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\!main.cpp
 	"tests.h"
 
-1686821638 c:\!zavod-2020\projects\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\tests.h
+1687010613 c:\!zavod-2020\projects\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\tests.h
 	"vscr.h"
 	"figure.h"
 	"korzina.h"
 	"game.h"
 	"infopanel.h"
+	"control\program.h"
 
 1686494156 c:\!zavod-2020\projects\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\vscr.h
 	"config.h"
 
-1686825527 c:\!zavod-2020\projects\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\config.h
+1687076772 c:\!zavod-2020\projects\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\config.h
 	"myl.h"
 
-1686817069 c:\!zavod-2020\projects\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\myl.h
+1687002739 c:\!zavod-2020\projects\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\myl.h
 	<vector>
 	<string>
 	<chrono>
 	<thread>
+	<memory>
 	<initializer_list>
 	"idevice.h"
 
@@ -76,17 +78,17 @@
 1686821736 c:\!zavod-2020\projects\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\korzina.h
 	"figure.h"
 
-1686569329 source:c:\!zavod-2020\projects\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\device_console.cpp
+1687012459 source:c:\!zavod-2020\projects\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\device_console.cpp
 	"idevice.h"
 	<iostream>
 	<windows.h>
 
-1686826242 c:\!zavod-2020\projects\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\game.h
+1687076599 c:\!zavod-2020\projects\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\game.h
 	"korzina.h"
 	"keyboard.h"
 	"infopanel.h"
 
-1686592817 c:\!zavod-2020\projects\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\keyboard.h
+1687088288 c:\!zavod-2020\projects\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\keyboard.h
 	<conio.h>
 	"config.h"
 	<algorithm>
@@ -120,4 +122,24 @@
 	<iostream>
 
 1687011742 source:e:\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\control\resurces.cpp
+
+1687012263 c:\!zavod-2020\projects\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\control\program.h
+	"menu.h"
+
+1687087329 c:\!zavod-2020\projects\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\control\menu.h
+	"arbiter.h"
+
+1687088978 c:\!zavod-2020\projects\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\control\arbiter.h
+	"resurces.h"
+	"player.h"
+
+1687075104 c:\!zavod-2020\projects\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\control\resurces.h
+	"../config.h"
+	"../myl.h"
+	<iostream>
+
+1687081517 c:\!zavod-2020\projects\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\control\player.h
+	"../game.h"
+
+1687076944 source:c:\!zavod-2020\projects\cb-2023\mylessongd\forjurnal\tetrisforgd\forjurnal\code\control\resurces.cpp
 
