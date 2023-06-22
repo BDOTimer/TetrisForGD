@@ -17,6 +17,7 @@
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
+					<Add option="-static" />
 				</Linker>
 			</Target>
 		</Build>
@@ -33,6 +34,8 @@
 		<Unit filename="code/control/program.h" />
 		<Unit filename="code/control/resurces.cpp" />
 		<Unit filename="code/control/resurces.h" />
+		<Unit filename="code/control/timer.h" />
+		<Unit filename="code/control/toplist.h" />
 		<Unit filename="code/device_console.cpp" />
 		<Unit filename="code/figure.h" />
 		<Unit filename="code/game.h" />

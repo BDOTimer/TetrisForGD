@@ -1,6 +1,4 @@
-﻿
-#include "resurces.h"
-#include "toplist.h"
+﻿#include "resurces.h"
 
 std::unique_ptr<Resurces> ResurcesHolder::res = nullptr;
 
@@ -39,7 +37,7 @@ void Resurces::create()
         L"#                  #",
         L"#  1. Один игрок   #",
         L"#  2. Два  игрока  #",
-        L"#  3. Топлист      #",
+        L"#  3. ...          #",
         L"#                  #",
         L"#  ...             #",
         L"#                  #",
@@ -55,8 +53,6 @@ void Resurces::create()
         L"/                        /",
         L"/////////--2023--/////////"
     }));
-
-    m.emplace_back(new Toplist);
 
     if(m.size() != Resurces::E_SIZE)
     {   throw(ERROR_EXCEPTION_MESS("Amount resurces!"));

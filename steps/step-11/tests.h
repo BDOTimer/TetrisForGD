@@ -146,25 +146,11 @@ inline void testclass_Infopanel()
 
 #include "control\program.h"
 ///--------------------------|
-/// testclass_Program.       |<<<----------------------------------------------|
+/// testclass_Game.          |<<<----------------------------------------------|===
 ///--------------------------:
 inline void testclass_Program()
 {
     Program run;
-}
-
-#include "control\toplist.h"
-///--------------------------|
-/// testclass_Toplist2.      |<<<----------------------------------------------|
-///--------------------------:
-inline void testclass_Toplist2()
-{
-    ResClass* tl = new Toplist;
-    VScreen scr ;
-            scr .write({0, 0}, *((Toplist*)tl));
-
-    Hard    hard;
-            hard << scr;
 }
 
 inline void tests()
@@ -177,14 +163,9 @@ inline void tests()
   //testclass_Game            ();
   //testclass_Infopanel       ();
 
-  ///---------------------------|
-  testclass_Program         ();
-  ///---------------------------|
+    testclass_Program         ();
 
   //myl::testclass_TimerGame  ();
-  //testclass_Load_file       ();
-  //testclass_Toplist         ();
-  //testclass_Toplist2        ();
 }
 
 #endif // TEST_H

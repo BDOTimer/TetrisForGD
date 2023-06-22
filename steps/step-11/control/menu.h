@@ -2,7 +2,7 @@
 #define MENU_H
 
 #include "arbiter.h"
-#include "toplist.h"
+#include "arbiter.h"
 
 ///----------------------------------------------------------------------------|
 /// Menu.
@@ -57,7 +57,6 @@ struct  Menu : protected ResurcesHolder
                         }
                         break;
                     }
-
                     case '2':
                     {   arbiter.start_game_two_play();
 
@@ -65,15 +64,8 @@ struct  Menu : protected ResurcesHolder
                             (Bunner*)res->get(Resurces::E_TODO));
                         break;
                     }
-
-                    case '3':///////////////////////////////////////////////////
-                    {
-                        show_banner_center_clear_pause(
-                            (Toplist*)res->get(Resurces::E_TOPLIST));
-                        break;
-                    }
-
-                    case  27: return;
+                    case '3':                  break;
+                    case  27:                 return;
                 }
             }
         }
@@ -85,8 +77,7 @@ private:
     KeysProfile keys;
     Arbiter  arbiter;
 
-    template<typename T>
-    void show_banner_center(T* bann)
+    void show_banner_center(Bunner* bann)
     {
         scr.write(scr.get_pos_center(*bann), *bann);
 
@@ -117,13 +108,6 @@ private:
     {   DEVICE.set_cursor_to_start();
         hard   <<  scr;
         DEVICE <<   "              \n";
-    }
-
-    void show_banner_center_clear_pause(Toplist* bann)
-    {   scr.clear               ();
-        show_banner_center      (bann);
-        DEVICE.pause_press_enter(L"PRESS ENTER");
-        clean                   ();
     }
 };
 

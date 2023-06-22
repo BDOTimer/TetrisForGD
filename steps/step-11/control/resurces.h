@@ -38,8 +38,7 @@ struct  Resurces
         E_GAME_OVER    , /// Bunner
         E_PROG_FINISHED, /// Bunner
         E_MENU_START   , /// Bunner
-        E_TODO         , ///
-        E_TOPLIST      , /// Toplist
+        E_TODO         ,
 
         /// ...
         E_SIZE
