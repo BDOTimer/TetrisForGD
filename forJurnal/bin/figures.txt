@@ -16,8 +16,8 @@
  OOO |
 [FIGURE]:20
 
-  o
-  ooo
+ o
+ ooo
 [FIGURE]:30
 
   ooo
