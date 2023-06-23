@@ -16,32 +16,22 @@
  OOO |
 [FIGURE]:20
 
- oo
-  oo
+  o
+  ooo
 [FIGURE]:30
 
-  oo
- oo
+  ooo
+  o
 [FIGURE]:40
 
   
  ====
-[FIGURE]
-     |
-  X  |
- XXX |
-  X  |
-     |
-[FIGURE]
+ 
+ [FIGURE]:40
+  
+  XX
+  XX
 
-   X
- XXX
- X
-[FIGURE]
-
-  X
- XXX
- X X
  
 
 

@@ -1,0 +1,12 @@
+В каком порядке создавались хедеры:
+
+1. program.h
+2. menu.h
+3. resurces.h
+
+4. arbiter.h
+5. player.h
+
+6. timer.h
+
+7. toplist.h
