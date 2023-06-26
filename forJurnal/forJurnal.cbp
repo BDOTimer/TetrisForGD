@@ -25,6 +25,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="bin/scenaries.txt" />
 		<Unit filename="code/!main.cpp" />
 		<Unit filename="code/README.md" />
 		<Unit filename="code/config.h" />
@@ -34,6 +35,7 @@
 		<Unit filename="code/control/program.h" />
 		<Unit filename="code/control/resurces.cpp" />
 		<Unit filename="code/control/resurces.h" />
+		<Unit filename="code/control/scenaries.h" />
 		<Unit filename="code/control/timer.h" />
 		<Unit filename="code/control/toplist.h" />
 		<Unit filename="code/device_console.cpp" />

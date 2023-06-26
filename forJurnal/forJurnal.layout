@@ -2,39 +2,9 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="bin\" />
-	<File name="code\game.h" open="1" top="1" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="code\korzina.h" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="4430" topLine="142" />
-		</Cursor>
-	</File>
-	<File name="code\control\toplist.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="4609" topLine="164" />
-		</Cursor>
-	</File>
-	<File name="code\tests.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="4676" topLine="156" />
-		</Cursor>
-	</File>
-	<File name="code\control\program.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="394" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="code\korzina.h" open="0" top="0" tabpos="15" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="488" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="code\control\menu.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1816" topLine="43" />
-		</Cursor>
-	</File>
-	<File name="code\control\timer.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="537" topLine="0" />
+			<Cursor1 position="3088" topLine="115" />
 		</Cursor>
 	</File>
 	<File name="code\idevice.h" open="0" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -42,9 +12,59 @@
 			<Cursor1 position="80" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="code\figure.h" open="0" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="code\control\program.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="38" topLine="94" />
+			<Cursor1 position="394" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="code\game.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="504" topLine="18" />
+		</Cursor>
+	</File>
+	<File name="code\control\timer.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="537" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="code\control\resurces.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1292" topLine="25" />
+		</Cursor>
+	</File>
+	<File name="code\myl.h" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3001" topLine="161" />
+		</Cursor>
+	</File>
+	<File name="code\control\resurces.cpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="50" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="code\!main.cpp" open="0" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="729" topLine="13" />
+		</Cursor>
+	</File>
+	<File name="code\control\arbiter.h" open="1" top="1" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="669" topLine="3" />
+		</Cursor>
+	</File>
+	<File name="code\keyboard.h" open="0" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1409" topLine="56" />
+		</Cursor>
+	</File>
+	<File name="code\vscr.h" open="0" top="0" tabpos="18" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="348" topLine="6" />
+		</Cursor>
+	</File>
+	<File name="code\tests.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="5339" topLine="211" />
 		</Cursor>
 	</File>
 	<File name="code\device_console.cpp" open="0" top="0" tabpos="19" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -52,49 +72,39 @@
 			<Cursor1 position="1096" topLine="33" />
 		</Cursor>
 	</File>
-	<File name="code\control\player.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="code\control\player.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="447" topLine="9" />
 		</Cursor>
 	</File>
-	<File name="code\control\resurces.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="code\figure.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1241" topLine="27" />
+			<Cursor1 position="635" topLine="9" />
 		</Cursor>
 	</File>
-	<File name="code\myl.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="code\config.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="4406" topLine="126" />
+			<Cursor1 position="370" topLine="3" />
 		</Cursor>
 	</File>
-	<File name="code\control\arbiter.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="code\control\scenaries.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1238" topLine="44" />
+			<Cursor1 position="3830" topLine="125" />
 		</Cursor>
 	</File>
-	<File name="code\!main.cpp" open="0" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="code\control\toplist.h" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="954" topLine="13" />
+			<Cursor1 position="4396" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="code\vscr.h" open="0" top="0" tabpos="18" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="code\control\menu.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="562" topLine="6" />
+			<Cursor1 position="4407" topLine="124" />
 		</Cursor>
 	</File>
-	<File name="code\control\resurces.cpp" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="bin\scenaries.txt" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1669" topLine="42" />
-		</Cursor>
-	</File>
-	<File name="code\keyboard.h" open="0" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1752" topLine="74" />
-		</Cursor>
-	</File>
-	<File name="code\config.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="453" topLine="0" />
+			<Cursor1 position="366" topLine="12" />
 		</Cursor>
 	</File>
 	<File name="code\infopanel.h" open="0" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -102,5 +112,5 @@
 			<Cursor1 position="348" topLine="0" />
 		</Cursor>
 	</File>
-	<EditorTabsLayout layout="0c66ab10649584cd0107de7800000002=0;forJurnal:code\tests.h,1;forJurnal:code\control\player.h,2;forJurnal:code\myl.h,*3;forJurnal:code\game.h,4;forJurnal:code\control\menu.h,5;forJurnal:code\control\arbiter.h@layout2|name=dummy;caption=;state=2098174;dir=3;layer=0;row=0;pos=0;prop=100000;bestw=659;besth=264;minw=659;minh=264;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=0c66ab10649584cd0107de7800000002;caption=;state=2098172;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=0;besth=0;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(5,0,0)=10|" />
+	<EditorTabsLayout layout="0873ad806499c5420000393700000002=0;forJurnal:code\control\scenaries.h,1;forJurnal:code\tests.h,2;forJurnal:code\config.h,3;forJurnal:code\figure.h,4;forJurnal:code\game.h,5;forJurnal:code\control\menu.h,6;forJurnal:code\control\resurces.cpp,7;forJurnal:code\control\resurces.h,8;forJurnal:code\myl.h,9;forJurnal:code\korzina.h,10;forJurnal:code\control\toplist.h,*11;forJurnal:code\control\arbiter.h@layout2|name=dummy;caption=;state=2098174;dir=3;layer=0;row=0;pos=0;prop=100000;bestw=659;besth=264;minw=659;minh=264;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=0873ad806499c5420000393700000002;caption=;state=2098172;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=0;besth=0;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(5,0,0)=10|" />
 </CodeBlocks_layout_file>
