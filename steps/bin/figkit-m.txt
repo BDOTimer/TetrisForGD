@@ -14,26 +14,6 @@
      |
   O  |
  OOO |
-     |
-     |
-[FIGURE]:20
-
- o
- ooo
-[FIGURE]:30
-
-
- ooo
- o
-[FIGURE]:40
-
-  
- ====
- 
- [FIGURE]:40
-  
-  XX
-  XX
 
  
 

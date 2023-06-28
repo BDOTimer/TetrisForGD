@@ -14,27 +14,39 @@
      |
   O  |
  OOO |
-     |
-     |
 [FIGURE]:20
 
- o
- ooo
+ oo
+  oo
 [FIGURE]:30
 
-
- ooo
- o
+  oo
+ oo
 [FIGURE]:40
 
   
  ====
- 
- [FIGURE]:40
-  
-  XX
-  XX
+[FIGURE]
+     |
+  X  |
+ XXX |
+  X  |
+     |
+[FIGURE]
 
+   X
+ XXX
+ X
+[FIGURE]
+
+  X
+ XXX
+ X X
+[FIGURE]
+
+ * *
+*****
+ * *
  
 
 
