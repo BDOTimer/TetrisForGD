@@ -203,3 +203,120 @@
 	<iostream>
 	<iostream>
 
+1690730179 source:j:\pro-2023\cb-2023[summer]\mylessongd\forjurnal\tetrisforgd\forjurnal\code\!main.cpp
+	"tests.h"
+
+1690716171 j:\pro-2023\cb-2023[summer]\mylessongd\forjurnal\tetrisforgd\forjurnal\code\tests.h
+	"vscr.h"
+	"figure.h"
+	"korzina.h"
+	"game.h"
+	"infopanel.h"
+	"control\program.h"
+	"control\toplist.h"
+	"control\scenaries.h"
+
+1687853538 j:\pro-2023\cb-2023[summer]\mylessongd\forjurnal\tetrisforgd\forjurnal\code\vscr.h
+	"config.h"
+
+1690783263 j:\pro-2023\cb-2023[summer]\mylessongd\forjurnal\tetrisforgd\forjurnal\code\config.h
+	"myl.h"
+
+1690785128 j:\pro-2023\cb-2023[summer]\mylessongd\forjurnal\tetrisforgd\forjurnal\code\myl.h
+	<vector>
+	<string>
+	<chrono>
+	<thread>
+	<memory>
+	<initializer_list>
+	"control\timer.h"
+	"idevice.h"
+
+1687351825 j:\pro-2023\cb-2023[summer]\mylessongd\forjurnal\tetrisforgd\forjurnal\code\control\timer.h
+	<string>
+	<chrono>
+	<stdio.h>
+
+1690728496 j:\pro-2023\cb-2023[summer]\mylessongd\forjurnal\tetrisforgd\forjurnal\code\idevice.h
+	<string>
+	<memory>
+
+1687783689 j:\pro-2023\cb-2023[summer]\mylessongd\forjurnal\tetrisforgd\forjurnal\code\figure.h
+	"myl.h"
+	<fstream>
+
+1687872119 j:\pro-2023\cb-2023[summer]\mylessongd\forjurnal\tetrisforgd\forjurnal\code\korzina.h
+	"figure.h"
+
+1687873123 j:\pro-2023\cb-2023[summer]\mylessongd\forjurnal\tetrisforgd\forjurnal\code\game.h
+	"korzina.h"
+	"keyboard.h"
+	"infopanel.h"
+	<functional>
+
+1690736240 j:\pro-2023\cb-2023[summer]\mylessongd\forjurnal\tetrisforgd\forjurnal\code\keyboard.h
+	<conio.h>
+	"config.h"
+	<algorithm>
+	<iostream>
+
+1687351825 j:\pro-2023\cb-2023[summer]\mylessongd\forjurnal\tetrisforgd\forjurnal\code\infopanel.h
+	"myl.h"
+
+1687351463 j:\pro-2023\cb-2023[summer]\mylessongd\forjurnal\tetrisforgd\forjurnal\code\control\program.h
+	"menu.h"
+
+1690786959 j:\pro-2023\cb-2023[summer]\mylessongd\forjurnal\tetrisforgd\forjurnal\code\control\menu.h
+	"arbiter.h"
+	"toplist.h"
+	"scenaries.h"
+
+1690730424 j:\pro-2023\cb-2023[summer]\mylessongd\forjurnal\tetrisforgd\forjurnal\code\control\arbiter.h
+	"resurces.h"
+	"player.h"
+
+1687640599 j:\pro-2023\cb-2023[summer]\mylessongd\forjurnal\tetrisforgd\forjurnal\code\control\resurces.h
+	"../config.h"
+	"../myl.h"
+	<iostream>
+
+1690716132 j:\pro-2023\cb-2023[summer]\mylessongd\forjurnal\tetrisforgd\forjurnal\code\control\player.h
+	"../game.h"
+	"toplist.h"
+
+1690785951 j:\pro-2023\cb-2023[summer]\mylessongd\forjurnal\tetrisforgd\forjurnal\code\control\toplist.h
+	"../config.h"
+	"../myl.h"
+	"tp.h"
+	"resurces.h"
+	<fstream>
+	<algorithm>
+	<sstream>
+	<list>
+
+1690785937 j:\pro-2023\cb-2023[summer]\mylessongd\forjurnal\tetrisforgd\forjurnal\code\control\tp.h
+	<list>
+	<vector>
+	<sstream>
+	<cstdint>
+	<fstream>
+	<iostream>
+	<algorithm>
+	<string_view>
+
+1687782623 j:\pro-2023\cb-2023[summer]\mylessongd\forjurnal\tetrisforgd\forjurnal\code\control\scenaries.h
+	"../config.h"
+	"../myl.h"
+	"../keyboard.h"
+	"resurces.h"
+	<fstream>
+	<algorithm>
+	<sstream>
+	<list>
+	<iostream>
+
+1687640356 source:j:\pro-2023\cb-2023[summer]\mylessongd\forjurnal\tetrisforgd\forjurnal\code\control\resurces.cpp
+	"resurces.h"
+	"toplist.h"
+	"scenaries.h"
+

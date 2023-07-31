@@ -1,0 +1,8 @@
+﻿  !main.cpp
+  resurces.cpp
+  device_console.cpp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 1746 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  T.vcxproj -> J:\PRO-2023\CB-2023[Summer]\myLessonGD\forJurnal\TetrisForGD\forJurnal\VC++2022\T\Release\T.exe

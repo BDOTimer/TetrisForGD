@@ -38,6 +38,7 @@
 		<Unit filename="code/control/scenaries.h" />
 		<Unit filename="code/control/timer.h" />
 		<Unit filename="code/control/toplist.h" />
+		<Unit filename="code/control/tp.h" />
 		<Unit filename="code/device_console.cpp" />
 		<Unit filename="code/figure.h" />
 		<Unit filename="code/game.h" />
