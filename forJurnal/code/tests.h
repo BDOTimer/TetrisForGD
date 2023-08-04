@@ -2,18 +2,16 @@
 #define TEST_H
 
 #include "vscr.h"
-///----------------------------------------------------------------------------|
-/// Баннер.
-///----------------------------------------------------------------------------:
+
+///--------------------------|
+/// testclass_Bunner.        |<<<--------------------------------------- Bunner:
+///--------------------------:
 struct  Bunner2 : public myl::Mat2D
 {       Bunner2(std::initializer_list<std::wstring> data) : myl::Mat2D(data)
         {
         }
 };
 
-///--------------------------|
-/// testclass_Bunner.        |<<<----------------------------------------------|
-///--------------------------:
 inline void testclass_Bunner()
 {   VScreen scr;
 
@@ -42,26 +40,29 @@ inline void testclass_Bunner()
 
 #include "figure.h"
 ///--------------------------|
-/// testclass_LoaderFigures. |<<<----------------------------------------------|
+/// testclass_LoaderFigures. |<<<-------------------------------- LoaderFigures:
 ///--------------------------:
 inline void testclass_LoaderFigures()
 {   VScreen        scr     ;
     LoaderFigures  lfigures;
+                   lfigures.test_extract_probability();
 
     lfigures.test();
 }
 
 ///--------------------------|
-/// testclass_Figure.        |<<<----------------------------------------------|
+/// testclass_Figure.        |<<<--------------------------------------- Figure:
 ///--------------------------:
 inline void testclass_Figure()
 {   VScreen scr   ;
     Figure  figure;
     Hard    hard  ;
 
-    for(unsigned i = 0; i < figure.get_amount(); ++i)
+  //for(unsigned i = 0; i < figure.get_amount(); ++i)
+    for(unsigned i = 0; i < 1000               ; ++i)
     {
-        figure.gen(int(i));
+      //figure.genn           (int(i));
+        figure.gen_probab_rand(      );
 
         scr.write({1, 1}, figure.get_mat());
 
@@ -73,7 +74,7 @@ inline void testclass_Figure()
 
 #include "korzina.h"
 ///--------------------------|
-/// testclass_Korzina.       |<<<----------------------------------------------|===
+/// testclass_Korzina.       |<<<-------------------------------------- Korzina:
 ///--------------------------:
 inline void testclass_Korzina()
 {
@@ -86,7 +87,7 @@ inline void testclass_Korzina()
     scr.write(position, korzina);
 
     Figure  figure;
-            figure.gen(0);
+            figure.genn(0);
 
     scr.write_alfa({1, 1}, figure.get_mat());
 
@@ -102,7 +103,7 @@ inline void testclass_Korzina()
 
 #include "game.h"
 ///--------------------------|
-/// testclass_Game.          |<<<----------------------------------------------|===
+/// testclass_Game.          |<<<----------------------------------------- Game:
 ///--------------------------:
 inline void testclass_Game()
 {
@@ -111,14 +112,14 @@ inline void testclass_Game()
     KeysProfileData      data;
     KeysProfileActionA a(data);
 
-    Game    game     (scr, L"Vasia", &a);
+    Game    game     (scr, L"Vasia", &a, 1, 1);
             game.init(                 );
             game.run (                 );
 }
 
 #include "infopanel.h"
 ///--------------------------|
-/// testclass_Infopanel.     |<<<----------------------------------------------|===
+/// testclass_Infopanel.     |<<<------------------------------------ Infopanel:
 ///--------------------------:
 inline void testclass_Infopanel()
 {
@@ -151,7 +152,7 @@ inline void testclass_Infopanel()
 
 #include "control\program.h"
 ///--------------------------|
-/// testclass_Program.       |<<<----------------------------------------------|
+/// testclass_Program.       |<<<-------------------------------------- Program:
 ///--------------------------:
 inline void testclass_Program()
 {
@@ -160,7 +161,7 @@ inline void testclass_Program()
 
 #include "control\toplist.h"
 ///--------------------------|
-/// testclass_Toplist2.      |<<<----------------------------------------------|
+/// testclass_Toplist2.      |<<<------------------------------------- Toplist2:
 ///--------------------------:
 inline void testclass_Toplist2()
 {
@@ -183,12 +184,12 @@ inline void testclass_Toplist2()
 
 #include "control\scenaries.h"
 ///--------------------------|
-/// testclass_xxx.           |<<<----------------------------------------------|
+/// testclass_Scenaries.     |<<<------------------------------------ Scenaries:
 ///--------------------------:
 inline void testclass_Scenaries_F()
 {
-  //testclass_LoadScenaries_f();
-    testclass_Scenaries_f    ();
+    testclass_LoadScenaries_f();
+  //testclass_Scenaries_f    ();
 }
 
 inline void testclass_Scenaries()
@@ -196,19 +197,19 @@ inline void testclass_Scenaries()
     VScreen scr;
     Hard   hard;
 
-    Scenaries sc;
+    Scenaries         sc;
     scr.write({0, 0}, sc);
 
     hard << scr;
 
     sc.set_sc('1');
 
-    ll(cfg->name  )
-    ll(cfg->figkit)
+    l(cfg->name  )
+    l(cfg->figkit)
 }
 
 ///------------------------------|
-/// testclass_IKeysProfileAction.|<<<------------------------------------------|
+/// testclass_IKeysProfileAction.|<<<----------------------- IKeysProfileAction:
 ///------------------------------:
 inline void testclass_IKeysProfileAction()
 {
@@ -244,7 +245,6 @@ inline void tests()
 
   //myl::testclass_TimerGame    ();
   //testclass_Load_file         ();
-  //testclass_Toplist           ();
   //testclass_Toplist2          ();
   //testclass_Scenaries_F       ();
 

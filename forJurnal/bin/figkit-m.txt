@@ -14,6 +14,17 @@
      |
   O  |
  OOO |
+[FIGURE]:10
+     |
+  #  |
+  ## |
+     |
+[FIGURE]:1
+     |
+ oOo |
+ O O |
+ oOo |
+[FIGURE] : END
 
  
 

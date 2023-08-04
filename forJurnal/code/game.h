@@ -14,7 +14,8 @@ struct  Game
 {       Game(VScreen&            _scr,
              std::wstring_view     nm,
              IKeysProfileAction*    k,
-             unsigned disp   = 0     )
+             unsigned            disp,
+             unsigned        poskor_x)
 
             :
                 displace_x(disp),
@@ -26,6 +27,8 @@ struct  Game
         {
             name +=  nm  ;
             name += L" >";
+
+            korzina.pos.x = poskor_x;
         }
 
     unsigned   displace_x;
@@ -36,8 +39,8 @@ struct  Game
     void init()
     {
         infocnt.pos  = {0, 1};
-                pcnt = &infocnt.push(L"cnt");
-                pnum = &infocnt.push(L"num");
+                pcnt = &infocnt.push(L"Cчёт ");
+                pnum = &infocnt.push(L"Фигур");
 
         ///---------------------------------|
         /// ...                             |
@@ -47,17 +50,16 @@ struct  Game
            *pcnt = 0;
            *pnum = 0;
 
-        figure.pos = POSSTART;
-        figure.gen();
+        figure.pos =  POSSTART  ;
+        figure.gen_probab_rand();
     }
 
     void run        (){         loop(); }///////////////////////////////////////
     int  get_counted(){ return *pcnt  ; }
 
     void add_to_name()
-    {   std::wstring mm; mm << cfg->name;
-        name += L"::";
-        name += mm   ;
+    {   name += L"::";
+        name += cfg->name;
     }
 
 
@@ -110,8 +112,8 @@ public:
 
                scr.write(korzina.pos, korzina);
 
-               figure.pos = POSSTART;
-               figure.gen();
+               figure.pos =  POSSTART  ;
+               figure.gen_probab_rand();
 
                if(is_collision(figure.pos))
                {    done = false;

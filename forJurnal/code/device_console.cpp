@@ -48,13 +48,13 @@ namespace console
             {
             }
 
-        IDevice& operator<<(std::wstring_view str)
-        {   std::wcout << str;
+        IDevice& operator>>(std::wstring& str)
+        {   std::getline   (std::wcin,    str);
             return *this;
         }
 
-        IDevice& operator>>(std::wstring& str)
-        {   std::getline   (std::wcin,    str);
+        IDevice& operator<<(std::wstring_view str)
+        {   std::wcout << str;
             return *this;
         }
 
@@ -73,12 +73,19 @@ namespace console
             return *this;
         }
 
+        IDevice& operator<<(unsigned n)
+        {   std::wcout   << std::to_wstring(n);
+            return *this;
+        }
+
         void pause_press_enter(std::wstring_view str = L"")
         {   std::wcout << str;
             std::cin.get   ();
         }
 
         void set_cursor_to_start(){ win::set_cursor_to_start(); }
+
+        void clear_screen       (){ std::system("cls"); }
     };
 
     void testclass_IDevice()
@@ -96,5 +103,11 @@ void IDevice::create_device_console()
 namespace console
 {
     void testclass_IDevice();
+}
+
+IDeviceT oIDeviceT;
+
+std::wstring IDeviceT::endl()
+{   std::wcout << ws.str() << '\n'; ws.str(L""); return L"";
 }
 

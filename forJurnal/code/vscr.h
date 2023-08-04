@@ -6,7 +6,7 @@
 ///----------------------------------------------------------------------------|
 /// Виртуальный экран.
 ///----------------------------------------------------------------------------:
-struct  VScreen : public myl::Mat2D
+struct  VScreen   : public myl::Mat2D
 {       VScreen() : Mat2D(cfg->W, cfg->H, cfg->C)
         {
         }
@@ -21,6 +21,12 @@ struct  VScreen : public myl::Mat2D
 
     void write(Vec2u pos, std::wstring s)
     {   myl::Mat2D::write(pos, s);
+    }
+
+    void xreload()
+    {   DEVICE.clear_screen();
+        auto m = myl::Mat2D(cfg->W * 2, cfg->H, cfg->C);
+        mat    = m.get_mat ();
     }
 };
 

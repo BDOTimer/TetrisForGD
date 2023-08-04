@@ -40,6 +40,12 @@ int main()
 
     IDevice::create_device_console();
 
+    {
+        //IDeviceT::test();
+        //Positioner_X::test();
+        //DEVICE.pause_press_enter(L"PRESS ENTER\n");
+    }
+
     //foo2();
 
     ///------------------------------//

@@ -11,7 +11,7 @@ struct  Korzina : public myl::Mat2D
             :   myl::Mat2D(w + 2, h + 1, ' ')//,
                 //pos(get_pos_center({w, h}, -1))
         {
-            pos.x = cfg->HK / 2;
+            //pos.x = cfg->WK / 2;
             pos.y = cfg->H - cfg->HK - 2;
             init();
         }

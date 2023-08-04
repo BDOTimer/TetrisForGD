@@ -11,6 +11,14 @@
 #include "control\timer.h"
 #include "idevice.h"
 
+#include <locale>
+#include <codecvt>
+
+inline std::wstring utf8_to_wstring(const std::string& str)
+{      std::wstring_convert<std:: codecvt_utf8_utf16<wchar_t> > myconv;
+    return  myconv.from_bytes(str);
+}
+
 struct Vec2u
 {   unsigned x, y;
 
@@ -188,7 +196,8 @@ struct  CustomException : public std::exception
 #define ERROR_EXCEPTION         CustomException(__LINE__, __FILE__)
 #define ERROR_EXCEPTION_MESS(M) CustomException(__LINE__, __FILE__, M)
 
-#define  l(v)  std::wcout << #v << " = " << (v) << "\n";
-#define ll(v)  std::cout  << #v << " = " << (v) << "\n";
+#define TESTINFO std::wcout << "TESTINFO: " << __func__ << '\n'
+
+//#define  ll(v)  std::wcout << #v << " = " << (v) << "\n";
 
 #endif // MYL_H

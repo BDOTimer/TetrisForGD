@@ -150,6 +150,8 @@ private:
     {   scr.clear                (  );
         show_banner_center       (sc);
         sc->select               (  );
+
+      //scr.reload               (  );
     }
 };
 

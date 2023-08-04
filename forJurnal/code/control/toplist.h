@@ -31,7 +31,7 @@ struct  Toplist   : public myl::Mat2D, public ResClass
     }
 
     void save()
-    {   Serial  ss;
+    {    Serial ss;
                 ss << cargo ;
                 ss.to_file();
     }

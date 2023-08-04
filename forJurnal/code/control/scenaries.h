@@ -6,8 +6,11 @@
 #include "../keyboard.h"
 #include "resurces.h"
 
-#include <fstream>
+//#define _SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING
+
 #include <algorithm>
+#include <iostream>
+#include <fstream>
 #include <sstream>
 #include <list>
 
@@ -17,21 +20,35 @@
 ///-------------------------------------------------------------- LoadScenaries:
 struct  LoadScenaries
 {       LoadScenaries()
-        {   std::ifstream f(filename);
-            std::getline (f, s, '\f');
+        {
+            {
+                //auto PP = std::codecvt_utf8_utf16<wchar_t>();
+                //std::wifstream f(filename );
+                //               f.imbue(std::locale(f.getloc(), &PP));
+                //std::getline  (f, s, L'\f');
+            }
+            {
+                std::ifstream f(filename );
+                if          (!f.is_open())
+                {   throw(ERROR_EXCEPTION_MESS("!file.is_open()"));
+                }
 
-            myl::split<std::string_view>(s, m, " \n\"=;");
+                std::string ss; std::getline  (f, ss, '\f');
+                s = utf8_to_wstring(ss);
+            }
+
+            myl::split<std::wstring_view>(s, m, L" \n\"=;");
 
             for(size_t i  = 0; i < m.size(); ++i)
-            {     if(m[i] == "SCENARIO") pos_start.push_back(i);
+            {     if(m[i] == L"SCENARIO") pos_start.push_back(i);
             }
 
             for(size_t i  = 0; i < m.size(); ++i)
-            {     if(m[i] == "{") pos_a.push_back(i);
+            {     if(m[i] == L"{") pos_a.push_back(i);
             }
 
             for(size_t i  = 0; i < m.size(); ++i)
-            {     if(m[i] == "}") pos_b.push_back(i);
+            {     if(m[i] == L"}") pos_b.push_back(i);
             }
 
             check_stupid(pos_start, pos_a, pos_b);
@@ -41,7 +58,7 @@ struct  LoadScenaries
     std::vector<size_t> pos_a    ;
     std::vector<size_t> pos_b    ;
 
-    std::string_view find(std::string_view f, unsigned n)
+    std::wstring_view find(std::wstring_view f, unsigned n)
     {
         for(unsigned i = pos_a[n]; i < pos_b[n]; ++i)
         {
@@ -49,15 +66,24 @@ struct  LoadScenaries
             {   return m[i + 1];
             }
         }
+        return L"";
+    }
 
-        return "";
+    std::wstring_view geti(unsigned i, std::wstring_view nameval) const
+    {
+        for(size_t   j =  pos_a[i]; j < pos_b[i]; ++j)
+        {   if(nameval ==     m[j])
+            {   return    m[1 + j];
+            }
+        }
+        return L"10";
     }
 
 private:
-    const char* filename = "scenaries.txt";
+    const wchar_t* filename = L"scenaries.txt";
 
-    std::string                   s;
-    std::vector<std::string_view> m;
+    std::wstring                   s;
+    std::vector<std::wstring_view> m;
 
     void check_stupid(const std::vector<size_t>& ps,
                       const std::vector<size_t>& pa,
@@ -78,23 +104,25 @@ private:
         }
     }
 
-    const char* error_mess = "File \"Scenaries.txt\" fail!";
-    friend void testclass_LoadScenaries_f();
-    friend void testclass_Scenaries_f    ();
+    const  char*  error_mess = "File \"Scenaries.txt\" fail!";
+
+    friend void   testclass_LoadScenaries_f();
+    friend void   testclass_Scenaries_f    ();
     friend struct Scenaries;
 };
 
-#include <iostream>
 ///-----------------------------|
 /// testclass_LoadScenaries     |
 ///-----------------------------:
 inline void testclass_LoadScenaries_f()
 {
+    TESTINFO;
+
     LoadScenaries ld;
 
     for(const auto&  s : ld.m )
-    {   std::cout << s << '\n';
-    }   std::cout      << '\n';
+    {   std::wcout << s << '\n';
+    }   std::wcout      << '\n';
 }
 
 ///----------------------------------------------------------------------------|
@@ -107,8 +135,8 @@ struct  Scenaries   : public    myl::Mat2D   ,
         {
             cfgs.resize(pos_start.size());
 
-            for(size_t i = 0; i < cfgs.size();   ++i)
-            {   cfgs[i].name = m[pos_start[i] + 1];
+            for(size_t i = 0; i < cfgs.size(); ++i)
+            {   cfgs[i].name = m[pos_start[i]  + 1];
             }
 
             build_form();
@@ -119,7 +147,8 @@ struct  Scenaries   : public    myl::Mat2D   ,
         }
 
     void select()
-    {   do
+    {
+        do
         {   if(int      k =  -1; ( k = keys.scan() ) != 0)
             {        if(k == 13)              break;
                 else if(k >   0) { set_sc(k); break; }
@@ -132,13 +161,14 @@ struct  Scenaries   : public    myl::Mat2D   ,
            n -= '1';
         if(n >= cfgs.size()) return;
 
-        //l(n)
+        auto& cf =  cfgs[n];
 
-        auto& cf = cfgs[n];
-
-        if(buid_cfg(cf, n))
-        {    cfg = &cf;
+        if(buid_cfg(cf,  n))
+        {    cfg = &cfgs[n];
         }
+
+//l(cfg->name)
+//DEVICE.pause_press_enter(L"PRESS ENTER\n");
     }
 
 private:
@@ -165,7 +195,7 @@ private:
 
                 beg->resize(6, ' ');
 
-                std::wstring name; name << cfgs[i].name;
+                std::wstring name = cfgs[i].name;
 
                         name.resize(sz_max + 1, ' ');
                 *beg += name;
@@ -183,11 +213,45 @@ private:
 
     bool buid_cfg(Config& cf, unsigned n)
     {
-        cf.figkit = find("Figkit", n);
+        cf.figkit = find(L"Figkit", n);
 
-        std::ifstream f(cf.figkit);
+        std::wifstream f(cf.figkit.c_str());
+
+//l(cf.figkit)
+//l(f.is_open())
+//DEVICE.pause_press_enter(L"PRESS ENTER\n");
+
+        if(f.is_open())
+        {
+            //cf.W  = find_uint(n, L"WS");
+            //cf.H  = find_uint(n, L"HS");
+
+            cf.WK = find_uint(n, L"WK");
+            cf.HK = find_uint(n, L"HK");
+
+            //l(cf.W )
+            //l(cf.H )
+            //l(cf.WK)
+            //l(cf.HK)
+        }
 
         return f.is_open();
+    }
+
+    unsigned find_uint(unsigned i, std::wstring_view nameval) const
+    {
+        auto ss = geti(i, nameval);
+
+        unsigned n;
+
+        try
+        {    std::wstring  w(ss);
+             n = std::stoi(w.c_str());
+        }
+        catch(...)
+        {    n = 10;
+        }
+        return n;
     }
 
     friend void testclass_Scenaries_f();
@@ -198,6 +262,8 @@ private:
 ///-----------------------------:
 inline void testclass_Scenaries_f()
 {
+    TESTINFO;
+
     Scenaries sc;
               sc.build_form();
 

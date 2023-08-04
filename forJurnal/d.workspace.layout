@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_layout_file>
+	<FileVersion major="1" minor="0" />
+	<ActiveProject path="forJurnal.cbp" />
+	<EditorTabsLayout layout="de82ba2064cba8810000125c00000002=0;forJurnal:code\control\scenaries.h,1;forJurnal:code\!main.cpp,2;forJurnal:code\tests.h,3;forJurnal:code\myl.h,4;forJurnal:code\control\arbiter.h,*5;forJurnal:code\config.h,6;forJurnal:code\game.h,7;forJurnal:code\korzina.h,8;forJurnal:code\control\resurces.h,9;forJurnal:code\control\resurces.cpp@layout2|name=dummy;caption=;state=2098174;dir=3;layer=0;row=0;pos=0;prop=100000;bestw=664;besth=275;minw=664;minh=275;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=de82ba2064cba8810000125c00000002;caption=;state=2098172;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=0;besth=0;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(5,0,0)=10|" />
+</CodeBlocks_workspace_layout_file>

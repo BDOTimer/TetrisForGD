@@ -31,7 +31,10 @@ struct  Arbiter
 
         KeysProfileActionA a(data);
 
-        Game game     (scr, pp.back().name, &a, cfg->W/2 - cfg->WK);
+                          positioner_X.calc(Positioner_X::E_ONE, cfg);//////////
+        const auto& pl1 = positioner_X.get (Positioner_X::E_ONE);
+
+        Game game     (scr, pp.back().name, &a, pl1.disp, pl1.poskor_x);
              game.add_to_name();
              game.init       (); pp.back().set(&game);
              game.run        ();
@@ -62,13 +65,17 @@ struct  Arbiter
         KeysProfileActionA a(data);
         KeysProfileActionB b(data);
 
-        Game game1     (scr, pp.front().name, &b, 1       );
+                          positioner_X.calc(Positioner_X::E_TWO, cfg);//////////
+        const auto& pl1 = positioner_X.get (Positioner_X::E_ONE);
+        const auto& pl2 = positioner_X.get (Positioner_X::E_TWO);
+
+        Game game1     (scr, pp.front().name, &b, pl1.disp, pl1.poskor_x);
              game1.add_to_name();
              game1.init       ();
 
              pp.front().set(&game1);
 
-        Game game2     (scr, pp.back().name , &a, cfg->W/2+1);
+        Game game2     (scr, pp.back ().name, &a, pl2.disp, pl2.poskor_x);
              game2.add_to_name();
              game2.init       ();
 
@@ -95,9 +102,10 @@ struct  Arbiter
     }
 
 private:
-    VScreen&         scr;
-    InputString    input;
-    KeysProfileData data;
+    VScreen&              scr;
+    InputString         input;
+    KeysProfileData      data;
+    Positioner_X positioner_X;
 
     std::vector<Player> pp;
 
@@ -115,10 +123,6 @@ private:
         {   pl.to_toplist();
             if(pl.game->done) pl.win++;
         }
-    }
-
-    unsigned center_x()
-    {   return (cfg->W - cfg->WK) / 2 - 1;
     }
 };
 

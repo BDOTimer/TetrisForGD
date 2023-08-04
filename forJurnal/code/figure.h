@@ -2,7 +2,21 @@
 #define FIGURE_H
 
 #include "myl.h"
+#include <list>
 #include <fstream>
+
+struct  proFigure : public myl::Mat2D
+{       proFigure(const std::vector<std::wstring>& e) : myl::Mat2D(e)
+        {
+        }
+
+    unsigned id                   {0};
+
+    ///------------------------------|
+    /// Вероятность выпадения фигуры.|
+    ///------------------------------:
+    unsigned probability          {0};
+};
 
 ///----------------------------------------------------------------------------|
 /// Загрузка набора фигур из файла.
@@ -12,6 +26,8 @@ struct  LoaderFigures
         {
             load_from_file();
         }
+
+    unsigned probability_summa = 0;
 
     myl::Mat2D* gen(int r = -1)
     {   if(r < 0)  r  = rand() % figures.size(  );
@@ -23,14 +39,27 @@ struct  LoaderFigures
 
     unsigned get_amount()const { return figures.size(); }
 
-    void test(){ test_01(); }
+    void test                    () const { test_01(); }
+    void test_extract_probability() const
+    {
+        std::wstring s{L"qwerty : 2023xxx"};
+
+        auto n = extract_probability(s,  0);
+
+        DEVICE << L"probability: " << std::to_wstring(n)  << '\n';
+    }
+
+    unsigned   get_id_rand()
+    {   int    r = rand() % maprand.size();
+        return maprand[(unsigned)r];
+    }
 
 private:
-    std::vector<myl::Mat2D> figures;
+    std::vector<proFigure> figures;
 
-    void test_01()
+    void test_01() const
     {   for    (const auto& mat : figures)
-        {   DEVICE << "[FIGURE]:" << '\n';
+        {   DEVICE << "[FIGURE]:" << std::to_wstring(mat.probability) << '\n';
             for(const auto& s   : mat.get_mat())
             {   DEVICE   << s  << '\n';
             }
@@ -39,49 +68,63 @@ private:
 
     const wchar_t C = ' ';
 
+    std::wstring_view FIGKEY = L"[FIGURE]";
+
     void load_from_file()
     {
-        if(std::wifstream file(cfg->figkit); file.is_open())
+        if(std::wifstream file(cfg->figkit.c_str()); file.is_open())
         {
-            for(std::wstring s; std::getline(file, s);)
+            std::vector<std::vector<std::wstring>> m;
+            unsigned                        probs{0};
             {
-                if(s.find(L"[FIGURE]") != s.npos)
+                for   ( std::wstring s ; std::getline(file, s);)
                 {
-                    for(bool b = true; b;)
+                    if( s.find(FIGKEY) != s.npos)
                     {
-                        b = false;
-
-                        std::vector<std::wstring> temp;
-
-                        for(int n = 0; n < 5 && std::getline(file, s); ++n)
+                        if(!m.empty())
                         {
-                            if(s.find(L"[FIGURE]") != s.npos)
-                            {   b = true;
-                                break;
+                            if(m.back    ( ).size() < 3)
+                            {  m.pop_back( );
                             }
-
-                            if(s.size() != 5) s.resize(5, C);
-
-                            temp.push_back(s);
-                        }
-
-                        if(!is_empty(temp))
-                        {
-                            for(int n = temp.size(); n < 5 && n > 2; ++n)
+                            else
                             {
-                                temp.push_back(std::wstring(5, C));
+                                ///------|
+                                /// Res. |
+                                ///------:
+                                /// ...
+
+                                for(size_t i = m.back().size(); i < 5; ++i)
+                                {   m.back().push_back(std::wstring(5,  C));
+                                }
+
+    figures.push_back (proFigure(    m.back  ())  );
+    figures.back().probability = probs;
+    figures.back().id          = figures.size() - 1;
+
                             }
                         }
 
-                        if(temp.size() == 5 )
-                        {   figures.push_back(myl::Mat2D(temp));
-                        }
-
+                        m.push_back(std::vector<std::wstring>     ());
+                        probs = extract_probability(s, FIGKEY.size());
                     }
+                    else if(!m.empty() && m.back ().size()  < 5)
+                    {
+                        m.back ().push_back     (s   );
+                        m.back ().back( ).resize(5, C);
+                    }
+                }
+
+                if(m.empty())
+                {   DEVICE << "ERROR: FIGKEY not find.\n";
+                    return;
                 }
             }
         }
         else DEVICE << "ERROR FILE\n";
+
+        for(const auto& f : figures) probability_summa += f.probability;
+
+        init_maprand();
     }
 
     bool is_empty(const std::vector<std::wstring>& f) const
@@ -91,6 +134,50 @@ private:
             }
         }
         return true;
+    }
+
+private:
+    unsigned extract_probability(std::wstring_view s, size_t p) const
+    {   unsigned a = 0;
+
+        if( p = s.find(L':', p); p != s.npos)
+        {
+            try
+            {   ++p;
+                std::wstring ss(s.substr(p, s.size() - p));
+                auto d = std::stod (ss);
+
+                a = d < 0 ? 0 : (unsigned)d;
+            }
+            catch(...)
+            {   a = 1;
+            }
+        }
+        return  a;
+    }
+
+    std::vector<unsigned> maprand;
+    void init_maprand ()
+    {   maprand.resize(probability_summa, 0);
+
+        unsigned i = 0;
+
+        for(const auto& f : figures)
+        {
+            const auto& N = f.probability;
+
+            for(unsigned j = 0; j < N; ++j)
+            {   maprand[i++] = f.id;
+            }
+        }
+
+      //debug_maprand(); ///////////////////////////////////////////////////////
+    }
+
+    void debug_maprand()
+    {   for(const auto& id : maprand)
+        {   DEVICE << std::to_wstring(id) << '\n';
+        }
     }
 };
 
@@ -110,8 +197,14 @@ struct  Figure
         return *pFig;
     }
 
-    void gen(int n = -1)
+    void genn(int n = -1)
     {   pFig = figures.gen(n);
+    }
+
+    void gen_probab_rand()
+    {
+
+        pFig = figures.gen(rrand());
     }
 
     unsigned get_amount() const { return figures.get_amount(); }
@@ -120,6 +213,10 @@ struct  Figure
 private:
     LoaderFigures figures;
     myl::Mat2D*   pFig = nullptr;
+
+    unsigned rrand()
+    {   return figures.get_id_rand();
+    }
 };
 
 

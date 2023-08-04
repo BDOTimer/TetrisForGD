@@ -1,37 +1,48 @@
+# UTF-8
 #------------------------------------------------------------------------------|
 # - в кавычках строки без пробелов.
 #
 #------------------------------------------------------------------------------:
+SCENARIO = "Дефолт"
+{
+    Figkit = "figures.txt";
 
-SCENARIO = "Easy"
+    WS = 78
+    HS = 22
+
+    WK = 13
+    HK = 13
+}
+
+SCENARIO = "Легко"
 {
     Figkit = "figkit-e.txt";
 
-    WS = 30
-    HS = 30
+    WS = 78
+    HS = 22
 
-    WK = 12
-    HK = 22
+    WK = 14
+    HK = 14
 }
 
-SCENARIO = "Middle";
+SCENARIO = "Средне";
 {
     Figkit = "figkit-m.txt";
 
-    WS = 30
-    HS = 30
+    WS = 78
+    HS = 22
 
-    WK = 12
-    HK = 22
+    WK = 14
+    HK = 14
 }
 
-SCENARIO = "Difficult";
+SCENARIO = "Тяжело";
 {
     Figkit = "figkit-d.txt";
 
-    WS = 30
-    HS = 30
+    WS = 78
+    HS = 22
 
-    WK = 12
-    HK = 22
+    WK = 25
+    HK = 14
 }
